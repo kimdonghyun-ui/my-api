@@ -27,11 +27,11 @@
       "description": "Development server"
     },
     {
-      "url": "YOUR_STAGING_SERVER",
+      "url": "https://my-api-dong.herokuapp.com/documentation",
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://my-api-dong.herokuapp.com/documentation",
       "description": "Production server"
     }
   ],
