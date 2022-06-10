@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_names",
+  "info": {
+    "name": "room-names"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "openName": {
+      "type": "string"
+    }
+  }
+}

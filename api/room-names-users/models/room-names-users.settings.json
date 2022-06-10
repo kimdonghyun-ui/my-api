@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_names_users",
+  "info": {
+    "name": "room-names-users"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "roomName": {
+      "type": "integer"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

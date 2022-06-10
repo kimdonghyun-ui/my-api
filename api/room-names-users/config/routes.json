@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/room-names-users",
+      "handler": "room-names-users.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/room-names-users/count",
+      "handler": "room-names-users.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/room-names-users/:id",
+      "handler": "room-names-users.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/room-names-users",
+      "handler": "room-names-users.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/room-names-users/:id",
+      "handler": "room-names-users.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/room-names-users/:id",
+      "handler": "room-names-users.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
