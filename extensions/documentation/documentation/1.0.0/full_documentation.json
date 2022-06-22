@@ -2970,7 +2970,10 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "foo": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "password": {
                     "type": "string"
                   }
                 }
