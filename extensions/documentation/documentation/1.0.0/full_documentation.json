@@ -2912,7 +2912,7 @@
     "/auth/local": {
       "post": {
         "deprecated": false,
-        "description": "Login a user using the identifiers email and password",
+        "description": "로그인",
         "responses": {
           "200": {
             "description": "response",
@@ -2920,8 +2920,14 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
+                    "jwt": {
                       "type": "string"
+                    },
+                    "refresh": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object"
                     }
                   }
                 }
@@ -2983,6 +2989,88 @@
         }
       }
     },
+    "/auth/refreshToken": {
+      "post": {
+        "deprecated": false,
+        "description": "리플래쉬 토큰 재발급",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "jwt": {
+                      "type": "string"
+                    },
+                    "refresh": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "UsersPermissions - User"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "token": {
+                    "type": "string"
+                  },
+                  "renew": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+
+
+
+
     "/auth/local/register": {
       "post": {
         "deprecated": false,
